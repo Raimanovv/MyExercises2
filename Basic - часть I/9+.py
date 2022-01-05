@@ -4,5 +4,6 @@
 # Пример вывода: Экзамен начнется с: 11/12/2014
 
 exam_st_date = (11, 12, 2014)
-print('Экзамен начнется с:{}/{}/{}'.format(exam_st_date[0], exam_st_date[1], exam_st_date[2]))
-# можно улучшить чтобы не перечислять exam_st_date
+print(f'Экзамен начнется с: {exam_st_date[0]}/{exam_st_date[1]}/{exam_st_date[2]}')
+
+# мб можно улучшить

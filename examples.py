@@ -157,3 +157,21 @@ def calc(a, b):
 if __name__ == '__main__':
     print('abracadabra')
     print(calc(2, 2))
+
+//////////datetime////////////////////////////////////////////
+
+"""Модуль datetime
+https://www.youtube.com/watch?v=JI--7RqYkE0"""
+
+import datetime
+
+# print(datetime.datetime.today()) ## текущее время
+# print(datetime.datetime.now()) ## можно установить временную зону в ()
+d1 = datetime.datetime.today()
+print(d1)
+d2 = datetime.timedelta(days=1) # указать своё время (day=0, seconds=0, minutes=0, hours=0, weeks=0, ...)
+print(d2.days) # без метода .days выводит 1 day, 0:00:00, а с этим методом 1 (просто цифра)
+d3 = d1 + d2
+print(d3)
+
+print(d3.strftime("%A %d %B %Y")) # ставит данные времени так как нам надо через специальные символы
