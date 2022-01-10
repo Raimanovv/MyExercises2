@@ -186,3 +186,16 @@ print(datetime.date(2014, 7, 20)) # чтобы указать свою дату.
 isinstance(1, int)  # True
 isinstance('some', str)  # True
 isinstance(1.7, float)  # True
+
+/////////////open()////////////////////////////////////////////
+
+def check_file(path):
+    file = open(path, 'r', encoding='utf-8')
+    return file.read()
+print(check_file('34.py'))
+
+
+import os.path
+def check_file(path):
+    return os.path.isfile(path)  #Проверка наличия такого файла (True/False)
+print(check_file('34.py'))
