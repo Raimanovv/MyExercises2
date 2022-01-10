@@ -194,6 +194,7 @@ def check_file(path):
     return file.read()
 print(check_file('34.py'))
 
+/////////////os.path - модуль //////////////////////////////////
 
 import os.path
 def check_file(path):
