@@ -6,5 +6,5 @@ def info(name, age, address):
     print('Возраст:', age)
     print('Адрес:', address)
 
-
-info('Rustam', 21, 'Туймазы, ул. Рассветная 36')
+if __name__ == '__main__':
+    info('Rustam', 21, 'Екб, ул. Рассветная 63')
