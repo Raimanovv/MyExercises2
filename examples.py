@@ -200,3 +200,18 @@ import os.path
 def check_file(path):
     return os.path.isfile(path)  #Проверка наличия такого файла (True/False)
 print(check_file('34.py'))
+
+/////////////import time - модуль //////////////////////////////////
+
+import time
+
+print(time.asctime()) # текущее время
+print(time.localtime()) # текущее время, которое можно считать по отдельности
+
+t1 = time.localtime()
+print('Year = ', t1[0]) # 2022 из (tm_year=2022, tm_mon=1, tm_mday=13, tm_hour=12, tm_min=27, ...)
+
+for i in range(10):
+    print(i)
+    time.sleep(1) # задержка в 1 секунду
+
