@@ -1,16 +1,14 @@
 '''
-Если большой файл
+Если большой файл используем readlines()
+Если в пути есть экранирование "/", то используем (r)
 '''
 
-with open('filee.txt') as file:
-    data = file.readlines()
+with open(r'C:\Users\elina\PycharmProjects\MyExercises\Models\csv\csv.reader().py', encoding='utf-8') as file:
+    data = file.read()
     print(data)
 
 
 ''' 
-# readlines
-['hello world\n', '54'] 
-
 # read
 hello world
 54
