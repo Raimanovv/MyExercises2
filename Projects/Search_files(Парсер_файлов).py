@@ -2,6 +2,9 @@
 
 import os, shutil
 
+KEY_FOR_SEARCH = input('Что ищем???\n')  # Константы пишутся под импортом
+PATH_FOR_COPY = input('Куда копировать файлы?\n')
+
 
 def search():
     for adress, dirs, files in os.walk(input('Введите путь старта\n')):  # Выдает по картежу (путь, [папки], [файлы])
@@ -14,5 +17,30 @@ def search():
                 # автоматически добавляет символ '/', если нужно
                 '''
 
+
+def read_from_pathtxt(path):
+    with open(path) as r:  # Если не указать в '', то автоматически используется 'r'
+        for i in r:  # Построчное чтение файла, для экономии рабочей мощности компьютера
+            if KEY_FOR_SEARCH in i:
+                return copy(path)
+                # Функция будет завершать свою работу с помощью return,
+                # выдавать значение и одновременно с этим запускать функцию copy()
+                # передавая в нее path
+
+
+def copy(path):
+    file_name = path.split('\\')[-1]  # Путь делим по символу '\' и из полученного списка берем последний элемент
+    # Это имя файла с расширением
+
+    shutil.copyfile(path, os.path.join(PATH_FOR_COPY, file_name))  # os.path.join(Путь, ИмяНовогоФайлаКудаКопируем)
+    # shutil.copyfile(ПутьГдеЛежитОригинал, Путь'\'ИмяНовогоФайлаКудаКопируем)
+
+    print('Файл скопирован', file_name)
+
+
 for i in search():
-    print(i)
+    try:
+        read_from_pathtxt(i)
+    except Exception as e:
+        with open(os.path.join(PATH_FOR_COPY, 'errors.txt'), 'a') as r:  # Указываем, где создаем файл open((тут), 'a')
+            r.write(f'{str(e)}\n{i}\n')
