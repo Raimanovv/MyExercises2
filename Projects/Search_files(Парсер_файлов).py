@@ -8,8 +8,10 @@ PATH_FOR_COPY = input('Куда копировать файлы?\n')
 
 def search():
     for adress, dirs, files in os.walk(input('Введите путь старта\n')):  # Выдает по картежу (путь, [папки], [файлы])
+        if adress == PATH_FOR_COPY: # Исключает возможность парсинга скопированных файлов
+            continue  # Начинает следующий проход цикла, минуя оставшееся тело цикла (for или while)
         for file in files:
-            if file.endswith('.txt') and '$' not in file:  # Если файл заканчивается на '.txt', то True
+            if file.endswith('.jpd') and '$' not in file:  # Если файл заканчивается на '.txt', то True
                 yield os.path.join(adress, file)
                 '''
                 # yield делает из функции объект генератор
