@@ -1,4 +1,5 @@
 # https://www.youtube.com/watch?v=b--R9hY4n1g&list=LL&index=1
+# Поиск по всем файлам '.txt' и копирование в определенное место
 
 import os, shutil
 
