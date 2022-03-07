@@ -54,6 +54,6 @@ def copy(path):
 for i in search():
     try:
         read_from_pathtxt(i)
-    except Exception as e:
+    except Exception as e:  # Если не хотим заморачиваться, то пишем Exception
         with open(os.path.join(PATH_FOR_COPY, 'errors.txt'), 'a') as r:  # Указываем, где создаем файл open((тут), 'a')
             r.write(f'{str(e)}\n{i}\n')
