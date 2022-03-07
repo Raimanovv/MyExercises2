@@ -139,6 +139,7 @@ try:
 except:   # Это неправильно (нужно ловить конкретную ошибку, иногда можно ловить все ошибки),
     pass  # а также нужно указывать тип ошибки
 
+
 //////////__main__/////////////////////////////////////////////////////////
 
 """ Конструкция __main__ для чего и кому нужна.
@@ -157,6 +158,7 @@ def calc(a, b):
 if __name__ == '__main__':
     print('abracadabra')
     print(calc(2, 2))
+
 
 //////////datetime////////////////////////////////////////////
 
@@ -178,6 +180,7 @@ print(d3.strftime("%A %d %B %Y")) # ставит данные времени т�
 
 print(datetime.date(2014, 7, 20)) # чтобы указать свою дату. Атрибуты: year, month, day.
 
+
 //////////isinstance()/////////////////////////////////////////
 
 """Возвращает флаг, указывающий на то, является ли указанный объект экземпляром указанного 
@@ -187,6 +190,7 @@ isinstance(1, int)  # True
 isinstance('some', str)  # True
 isinstance(1.7, float)  # True
 
+
 /////////////open()////////////////////////////////////////////
 
 def check_file(path):
@@ -194,12 +198,14 @@ def check_file(path):
     return file.read()
 print(check_file('34.py'))
 
+
 /////////////os.path - модуль //////////////////////////////////
 
 import os.path
 def check_file(path):
     return os.path.isfile(path)  #Проверка наличия такого файла (True/False)
 print(check_file('34.py'))
+
 
 /////////////import time - модуль //////////////////////////////////
 
@@ -226,3 +232,17 @@ import os.path, time
 print(f"Last modified:{time.ctime(os.path.getmtime('62.py'))}")
 print(f"Created:{time.ctime(os.path.getctime('62.py'))}")
 
+
+/////////////  .endswith    .startswith//////////////////////////////////
+
+my_str = 'Discworld'
+my_str.endswith('jockey')  # False
+my_str.endswith('world')  # True
+my_str.endswith(('jockey', 'world'))  # True
+my_str.endswith('Disc', 0, 4)  # True
+
+my_str = 'Discworld'
+my_str.startswith('Mad')  # False
+my_str.startswith('Disc')  # True
+my_str.startswith(('Disc', 'Mad'))  # True
+my_str.startswith('world', 4, 9)  # True
