@@ -246,3 +246,14 @@ my_str.startswith('Mad')  # False
 my_str.startswith('Disc')  # True
 my_str.startswith(('Disc', 'Mad'))  # True
 my_str.startswith('world', 4, 9)  # True
+
+
+/////////////  map()     lambda//////////////////////////////////
+
+'''
+lambda функция используется только один раз
+map() применяет к каждому символу в списке,...
+map(function, iterables) --> map object
+'''
+
+mapped_numbers = list(map(lambda x: x * 2 + 3, numbers))
