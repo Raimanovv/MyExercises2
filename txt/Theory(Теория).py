@@ -257,3 +257,10 @@ map(function, iterables) --> map object
 '''
 
 mapped_numbers = list(map(lambda x: x * 2 + 3, numbers))
+
+///////////// sep='\n' //////////////////////////////////
+
+print('туториал', 'по', 'функции', 'print()', sep='\n')
+# туториал
+# по
+# функции
