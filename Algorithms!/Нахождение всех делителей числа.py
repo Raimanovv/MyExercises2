@@ -6,7 +6,6 @@ n = int(input('Введите число: '))
 i = 1
 a = []
 
-
 while i * i <= n:
     if n % i == 0:
         a.append(i)
