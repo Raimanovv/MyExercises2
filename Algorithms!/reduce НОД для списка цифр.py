@@ -15,5 +15,4 @@ for _ in range(n):
     ll.append(i)
 
 x = reduce(gcd, ll)
-
 print(x)
