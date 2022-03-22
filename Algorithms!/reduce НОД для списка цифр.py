@@ -10,6 +10,7 @@ def gcd(a, b):
 n = int(input())
 ll = list()
 
+
 for _ in range(n):
     i = int(input())
     ll.append(i)
