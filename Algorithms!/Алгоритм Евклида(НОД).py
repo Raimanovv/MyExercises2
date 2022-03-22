@@ -4,6 +4,7 @@
 
 a = 100
 b = 5
+
 while b > 0:
     # c = a % b
     # a = b
