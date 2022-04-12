@@ -6,4 +6,4 @@ def fact(x):
     return fact(x - 1) * x
 
 
-print(fact(10))
+print(fact(3))
