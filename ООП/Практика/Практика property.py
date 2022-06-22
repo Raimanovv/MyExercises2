@@ -31,7 +31,7 @@ class User:
 
     @staticmethod
     def easy_password(password):
-        with open('passwords.txt') as s:
+        with open('easy_passwords.txt') as s:
             for i in s.readlines():
                 if password == i.strip():
                     return True
